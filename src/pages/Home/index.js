@@ -6,7 +6,6 @@ import Zoom from 'react-reveal/Zoom';
 import { useFetch } from '../../hooks/useFetch';
 import logoKapt from '../../assets/img/logo-kapt.svg';
 import logoErg from '../../assets/img/logo-erg.svg';
-import IconBtn from '../../assets/icons/arrow-right.svg';
 import Eye from '../../assets/icons/eye.svg';
 import EcoImg from '../../assets/img/bg-eco.jpg';
 
@@ -19,13 +18,40 @@ const Home = () => {
         <header className="header">
           <nav className="header__navigation">
             <Link to="/">
-              <img src={logoKapt} alt="kapital" />
+              <img src={logoKapt} alt="Kapital" />
             </Link>
             <Link to="/">
-              <img src={logoErg} alt="erg" />
+              <img src={logoErg} alt="Erg" />
             </Link>
           </nav>
           <div className="container">
+            <div className="header__circle">
+              <div className="header__circe-wrapper">
+                <svg
+                  className="header__circle-icon"
+                  width="24"
+                  height="48"
+                  viewBox="0 0 24 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0)">
+                    <path d="M12.5 3V44.5M12.5 44.5L19 38M12.5 44.5L6 38" stroke="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect
+                        width="48"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 48) rotate(-90)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span>узнать больше</span>
+              </div>
+            </div>
             <div className="header__text-block">
               <div className="header__title">
                 <Fade left>
@@ -55,12 +81,6 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="header__circle">
-            <div className="header__circe-wrapper">
-              <img src={IconBtn} alt="узнать больше" className="header__circle-icon" />
-              <span>узнать больше</span>
             </div>
           </div>
         </header>
@@ -119,7 +139,7 @@ const Home = () => {
               </button>
             </div>
             <div className="article__eco-wrapper">
-              <img src={EcoImg} className="article__eco-img" alt="eco image" />
+              <img src={EcoImg} className="article__eco-img" alt="просмотров" />
             </div>
           </div>
         </section>
@@ -310,7 +330,7 @@ const Home = () => {
       <footer className="footer">
         <span>© 2021 MUSAN GROUP</span>
         <Link to="/">
-          <img src={logoErg} alt="logo erg" />
+          <img src={logoErg} alt="Erg" />
         </Link>
       </footer>
     </>
